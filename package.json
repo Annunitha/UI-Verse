@@ -41,7 +41,10 @@
     "dev": "vite",
     "preview": "vite preview",
     "csp:hash": "node scripts/csp-hash-generator.js",
-    "csp:update": "node scripts/csp-hash-generator.js --update"
+    "csp:update": "node scripts/csp-hash-generator.js --update",
+    "release": "semantic-release",
+    "changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
+    "version": "node scripts/version-manager.js"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.0.0",
