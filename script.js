@@ -307,6 +307,14 @@ function handleSearch(event) {
     footer:  "footer.html",
     color:   "color.html",
     colors:  "color.html",
+    pricing: "pricing.html",
+    subscription: "subscription.html",
+    subscriptions: "subscription.html",
+    billing: "subscription.html",
+    auth: "auth.html",
+    login: "auth.html",
+    signup: "auth.html",
+    authentication: "auth.html",
   };
 
   for (const key in routes) {
