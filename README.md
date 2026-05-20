@@ -134,6 +134,20 @@ npm run components:version:bump -- --bump=button:patch --note="Describe what cha
 
 ---
 
+## NPM Package
+
+Import the packaged components from `ui-verse`:
+
+```js
+import { DesignTokens, UVButton } from 'ui-verse';
+import 'ui-verse/design-tokens.css';
+import 'ui-verse/theme-switcher';
+```
+
+You can also import single components with subpaths like `ui-verse/button` or `ui-verse/modal`.
+
+---
+
 ## Component Usage Quick Examples
 
 Use this quick workflow when you add any UIverse component to a project:

@@ -5,4 +5,6 @@ export class UVModal extends HTMLElement{
     s.innerHTML = `<div><slot></slot></div>`;
   }
 }
-customElements.define('uv-modal', UVModal);
+if (!customElements.get('uv-modal')) {
+  customElements.define('uv-modal', UVModal);
+}

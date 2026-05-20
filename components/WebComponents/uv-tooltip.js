@@ -5,4 +5,6 @@ export class UVTooltip extends HTMLElement{
     s.innerHTML = `<span><slot></slot></span>`;
   }
 }
-customElements.define('uv-tooltip', UVTooltip);
+if (!customElements.get('uv-tooltip')) {
+  customElements.define('uv-tooltip', UVTooltip);
+}

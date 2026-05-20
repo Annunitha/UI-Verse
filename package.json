@@ -1,8 +1,25 @@
 {
     "name": "ui-verse",
     "version": "1.0.0",
-    "private": true,
     "description": "UI-Verse static site — quality gate tooling",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "sideEffects": true,
+    "exports": {
+        ".": "./dist/index.js",
+        "./design-tokens": "./dist/design-tokens.js",
+        "./design-tokens.css": "./design-tokens.css",
+        "./button": "./dist/components/uv-button.js",
+        "./modal": "./dist/components/uv-modal.js",
+        "./tooltip": "./dist/components/uv-tooltip.js",
+        "./language-switcher": "./dist/components/uv-language-switcher.js",
+        "./theme-switcher": "./dist/components/uv-theme-switcher.js"
+    },
+    "files": [
+        "dist/**",
+        "design-tokens.css",
+        "README.md"
+    ],
     "scripts": {
         "lint:js": "eslint '**/*.js' --ext .js",
         "lint:css": "stylelint '**/*.css'",
@@ -52,6 +69,7 @@
         "search:demo": "node -e \"console.log('Open components/Discovery/component-discovery.html in a browser served from the static server')\"",
         "search:check": "node scripts/component-discovery-check.js",
         "a11y:test": "playwright test tests/a11y --config=playwright.a11y.config.ts --reporter=list",
+        "package:check": "playwright test tests/webcomponents/package.spec.js --config=playwright.webcomponents.config.ts --reporter=list",
         "components:version:generate": "node scripts/component-metadata.js --generate",
         "components:version:check": "node scripts/component-metadata.js --check",
         "components:version:bump": "node scripts/component-metadata.js"

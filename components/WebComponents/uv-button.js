@@ -5,4 +5,6 @@ export class UVButton extends HTMLElement {
     s.innerHTML = `<button><slot></slot></button>`;
   }
 }
-customElements.define('uv-button', UVButton);
+if (!customElements.get('uv-button')) {
+  customElements.define('uv-button', UVButton);
+}
