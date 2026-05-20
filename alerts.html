@@ -339,20 +339,20 @@
           <div class="al al-success al-dismissible" id="dis1">
             <i class="fa-solid fa-circle-check al-icon"></i>
             <div class="al-body">Payment completed successfully!</div>
-            <button class="al-close" onclick="dismissAlert('dis1')"><i class="fa-solid fa-xmark"></i></button>
+            <button class="al-close" onclick="dismissAlert('dis1')" aria-label="Dismiss alert"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="al al-warning al-dismissible" id="dis2">
             <i class="fa-solid fa-triangle-exclamation al-icon"></i>
             <div class="al-body">Your session will expire in 5 minutes.</div>
-            <button class="al-close" onclick="dismissAlert('dis2')"><i class="fa-solid fa-xmark"></i></button>
+            <button class="al-close" onclick="dismissAlert('dis2')" aria-label="Dismiss alert"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="al al-info al-dismissible" id="dis3">
             <i class="fa-solid fa-circle-info al-icon"></i>
             <div class="al-body">Version 2.0 is now available. <a class="al-link" href="#">Update now →</a></div>
-            <button class="al-close" onclick="dismissAlert('dis3')"><i class="fa-solid fa-xmark"></i></button>
+            <button class="al-close" onclick="dismissAlert('dis3')" aria-label="Dismiss alert"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
-        <button class="reset-btn" onclick="resetDismiss()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+        <button class="reset-btn" onclick="resetDismiss()" aria-label="Reset alerts"><i class="fa-solid fa-rotate-left"></i> Reset</button>
       </div>
       <p class="card-desc">Alerts with an × dismiss button — click to slide them away. Works with a tiny JS snippet.</p>
       <div class="actions">
@@ -522,29 +522,29 @@ function dismiss(id) {
       </div>
       <div class="card-preview">
         <div class="demo-toast-grid">
-          <div class="toast toast-success">
+          <div class="toast toast-success" role="status" aria-live="polite">
             <div class="toast-icon-wrap"><i class="fa-solid fa-circle-check"></i></div>
             <div class="toast-body">
               <div class="toast-title">Saved!</div>
               <div class="toast-msg">Your draft was saved.</div>
             </div>
-            <button class="toast-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="toast-close" aria-label="Dismiss notification"><i class="fa-solid fa-xmark"></i></button>
           </div>
-          <div class="toast toast-error">
+          <div class="toast toast-error" role="status" aria-live="polite">
             <div class="toast-icon-wrap"><i class="fa-solid fa-circle-xmark"></i></div>
             <div class="toast-body">
               <div class="toast-title">Upload Failed</div>
               <div class="toast-msg">File size exceeds 10MB limit.</div>
             </div>
-            <button class="toast-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="toast-close" aria-label="Dismiss notification"><i class="fa-solid fa-xmark"></i></button>
           </div>
-          <div class="toast toast-info">
+          <div class="toast toast-info" role="status" aria-live="polite">
             <div class="toast-icon-wrap"><i class="fa-solid fa-circle-info"></i></div>
             <div class="toast-body">
               <div class="toast-title">New Message</div>
               <div class="toast-msg">Alex sent you a message.</div>
             </div>
-            <button class="toast-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="toast-close" aria-label="Dismiss notification"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
       </div>
@@ -589,17 +589,17 @@ function dismiss(id) {
           <div class="banner banner-accent">
             <i class="fa-solid fa-rocket"></i>
             <span>UIverse v2.0 is live! <a class="banner-link" href="#">See what's new →</a></span>
-            <button class="banner-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="banner-close" aria-label="Dismiss banner"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="banner banner-warning">
             <i class="fa-solid fa-triangle-exclamation"></i>
             <span>Scheduled maintenance on Sunday 2 AM UTC.</span>
-            <button class="banner-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="banner-close" aria-label="Dismiss banner"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="banner banner-error">
             <i class="fa-solid fa-circle-xmark"></i>
             <span>Service disruption detected. Our team is working on a fix.</span>
-            <button class="banner-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="banner-close" aria-label="Dismiss banner"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
       </div>
@@ -1090,7 +1090,7 @@ function dismiss(id) {
         <div class="lt-title">${title}</div>
         <div class="lt-msg">${msg}</div>
       </div>
-      <button class="lt-close" onclick="this.parentElement.remove()"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lt-close" onclick="this.parentElement.remove()" aria-label="Dismiss notification"><i class="fa-solid fa-xmark"></i></button>
     `;
     container.appendChild(t);
     requestAnimationFrame(() => t.classList.add('lt-show'));

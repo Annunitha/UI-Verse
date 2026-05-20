@@ -37,7 +37,7 @@
     <span class="brand-text">UIverse</span>
   </div>
 
-  <nav class="sidebar-nav">
+  <nav class="sidebar-nav" role="navigation" aria-label="Main sidebar navigation">
     <ul>
       <li class="active">
         <a href="index.html">
@@ -215,10 +215,10 @@
 
     <!-- Mobile only buttons -->
     <div class="mobile-nav-actions">
-      <button class="mobile-action-btn outline-action">
+      <button class="mobile-action-btn outline-action" aria-label="Add component">
         <i class="fa-solid fa-plus"></i> Add Component
       </button>
-      <button class="mobile-action-btn primary-action">
+      <button class="mobile-action-btn primary-action" aria-label="Open my collection">
         <i class="fa-solid fa-bookmark"></i> My Collection
       </button>
     </div>
@@ -236,14 +236,14 @@
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebar()"></div>
 
 <!-- ================= NAVBAR ================= -->
-<header class="navbar" id="navbar">
-  <button class="menu-toggle" onclick="toggleSidebar()">
+<header class="navbar" id="navbar" role="navigation" aria-label="Top navigation">
+  <button class="menu-toggle" onclick="toggleSidebar()" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle sidebar">
     <i class="fa-solid fa-bars"></i>
   </button>
   <div class="logo">UIverse</div>
   <div class="search-bar">
     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-    <input type="text" id="searchInput" placeholder="Search components..." oninput="liveFilter(this.value)" />
+    <input type="text" id="searchInput" placeholder="Search components..." oninput="liveFilter(this.value)" aria-label="Search components" />
 <<<<<<< HEAD
     <kbd class="search-kbd">G��K</kbd>
 =======
@@ -254,12 +254,12 @@
     <ul id="searchDropdownResults" class="search-dropdown-results"></ul>
   </div>
   <div class="nav-right">
-    <button class="nav-btn outline-nav-btn"><i class="fa-solid fa-plus"></i> Add Component</button>
+    <button class="nav-btn outline-nav-btn" aria-label="Add component"><i class="fa-solid fa-plus"></i> Add Component</button>
     <a href="MyCollection.html">
-      <button class="nav-btn primary-nav-btn"><i class="fa-solid fa-bookmark"></i> My Collection</button>
+      <button class="nav-btn primary-nav-btn" aria-label="Open my collection"><i class="fa-solid fa-bookmark"></i> My Collection</button>
     </a>
     
-    <button id="darkModeToggle" class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+    <button id="darkModeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
   </div>
 </header>
 
