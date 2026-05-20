@@ -67,6 +67,7 @@
         "search:check": "node scripts/component-discovery-check.js",
         "a11y:test": "playwright test tests/a11y --config=playwright.a11y.config.ts --reporter=list",
         "package:check": "playwright test tests/webcomponents/package.spec.js --config=playwright.webcomponents.config.ts --reporter=list",
+        "dependencies:check": "node scripts/dependency-manager-check.js",
         "components:version:generate": "node scripts/component-metadata.js --generate",
         "components:version:check": "node scripts/component-metadata.js --check",
         "components:version:bump": "node scripts/component-metadata.js"
