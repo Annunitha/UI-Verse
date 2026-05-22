@@ -100,7 +100,25 @@ document.addEventListener('DOMContentLoaded', () => {
       wrapper.classList.remove('active');
     });
   });
+  
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
 });
+
+// ✅ Global scroll-to-top function (outside DOMContentLoaded)
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
 // Expand/Collapse Code Block
 let toastTimer;
