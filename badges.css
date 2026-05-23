@@ -1377,6 +1377,7 @@ MAIN
   width: 100%;
 }
 
+.footer-socials {
 .socials a {
   transition: all 0.3s ease;
 }
